@@ -34,4 +34,12 @@ public class humain {
 	public void boire() {
 		parler("Mmmm, un bon verre de "+this.boisson+" ! GLOUPS !");
 	}
+	
+	public void gagnerArgent(int n) {
+		this.argent+=n;
+	}
+	
+	public void perdreArgent(int n) {
+		this.argent-=n;
+	}
 }
