@@ -5,10 +5,11 @@ import personnages.humain;
 public class yakusa extends humain {
 	
 	private String clan;
-	private int reputation;
+	private int reputation=0;
 
-	public yakusa(String nom, int argent, String boisson) {
+	public yakusa(String nom, int argent, String boisson, String clan) {
 		super(nom, argent, boisson);
+		this.clan=clan;
 	}
 	
 	public String getClan() {
@@ -37,5 +38,10 @@ public class yakusa extends humain {
 		parler("J'ai perdu contre ronin-sama, je suis faible BAKAAA");
 		return argent;
 	}
-	
+
+	@Override
+	public void direBonjour(){
+		super.direBonjour();
+		parler("Je fait parti du clan "+this.clan);
+	}
 }

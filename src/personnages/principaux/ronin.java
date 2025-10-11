@@ -4,13 +4,13 @@ import personnages.humain;
 
 public class ronin extends humain{
 	
-	private int honneur;
+	private int honneur=0;
 	
 	public ronin(String nom, int argent, String boisson) {
 		super(nom, argent, boisson);
 	}
 	
-	public void donnerArgent(commercant c, int argent) {
+	public void donnerArgent(int argent, commercant c) {
 		perdreArgent(argent);
 		parler("Tenez mon brave.");
 		c.recevoirArgent(argent);
