@@ -2,13 +2,12 @@ package histoires;
 
 import personnages.*;
 import personnages.principaux.*;
+import secondaires.colporteur;
+import secondaires.ninja;
 
 public class monHistoire {
 	
 	public static void main(String [] args) {    
-		  humain humain1 = new humain("Prof", 10, "Porto");
-		  humain1.direBonjour();
-		  humain1.boire();
 		  commercant commercant = new commercant("Marchand", 35);
 		  commercant.direBonjour();
 		  yakusa yakusa = new yakusa("Yaku␣le␣noir", 42,"biere", "WarSong");
@@ -29,6 +28,13 @@ public class monHistoire {
 		  samourai1.direBonjour();
 		  ronin2.direBonjour();
 		  
+		  
+		  //Test Ninja
+		  
+		  ninja ninja = new ninja ("Chi",90,"lait","Sakai");
+		  colporteur commercant1 = new colporteur("Marchand Bis", 20);
+		  ninja.direBonjour();
+		  ninja.extorquer(commercant1);
 		}
 
 
