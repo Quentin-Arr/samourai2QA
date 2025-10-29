@@ -1,6 +1,9 @@
 package personnages.principaux;
 
-public class samourai extends ronin{
+import annexes.guerrier;
+import personnages.humain;
+
+public class samourai extends ronin implements guerrier{
 
 	private String seigneur;
 	
@@ -17,6 +20,11 @@ public class samourai extends ronin{
 	public void direBonjour() {
 			super.direBonjour();
 			parler("Je sers mon maitre, le seigneur "+this.seigneur);
+	}
+
+	@Override
+	public void combattre(humain h) {
+		parler("Je combat bla bla");
 	}
 	
 }
